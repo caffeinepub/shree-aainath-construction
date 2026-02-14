@@ -1,71 +1,23 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-14T15:27:25.095Z",
-  "summary": "The diff adds a single-page React marketing site with TopNav smooth-scrolling, Hero/About/Services/Projects/Contact sections, construction-themed styling tokens, and basic SEO meta/title. However, the required generated image assets are only referenced in code and are not shown as added under the specified public assets path. The diff also introduces Internet Identity/auth-related hooks, React Query actor plumbing, an empty backend actor, and a Caffeine.ai attribution footer link that were not requested for a static marketing site.",
-  "missing_requirements": [
-    {
-      "id": "REQ-4",
-      "requirement": "Add static asset handling for the required generated images by placing them under frontend/public/assets/generated and rendering them in the hero, logo/brand area, and projects gallery.",
-      "reason": "Components reference the required image paths, but the diff does not show any image files added under frontend/public/assets/generated (only code files were added). Therefore the requirement that the images exist under that directory is not evidenced by the diff.",
-      "evidence": [
-        "frontend/src/components/TopNav.tsx (references /assets/generated/sac-logo.dim_512x512.png)",
-        "frontend/src/components/sections/HeroSection.tsx (references /assets/generated/sac-hero.dim_1600x900.png)",
-        "frontend/src/components/sections/ProjectsSection.tsx (references /assets/generated/sac-project-01..06.dim_800x600.png)"
-      ]
-    }
-  ],
+  "generatedAt": "2026-02-14T15:41:54.828Z",
+  "summary": "REQ-6 appears implemented: ContactSection now reads business contact details from a frontend config module, renders phone/email as clickable tel:/mailto: links, renders address as plain text unless an addressLink is provided, and hides any unconfigured fields (no more \"TBD\").",
+  "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Internet Identity authentication context/provider and related identity management logic included in the app bootstrap.",
-      "reason": "The BuildRequest explicitly says authentication is not required for this marketing site; nevertheless, Internet Identity hooks/provider are added and used.",
+      "description": "Inquiry form now triggers a client-side alert and logs to console on submit (beyond just rendering UI).",
+      "reason": "BuildRequest only required updating contact details rendering; it explicitly allowed the form to remain UI-only but did not request new submit behavior/notifications.",
       "evidence": [
-        "frontend/src/main.tsx (wraps App with InternetIdentityProvider)",
-        "frontend/src/hooks/useInternetIdentity.ts"
-      ]
-    },
-    {
-      "description": "Backend actor integration hook using React Query and actor creation logic.",
-      "reason": "No backend functionality or actor usage was requested for a static marketing site; the diff adds actor hooks and query invalidation/refetch logic.",
-      "evidence": [
-        "frontend/src/hooks/useActor.ts"
-      ]
-    },
-    {
-      "description": "Caffeine.ai promotional/attribution link in the footer with UTM tracking parameters.",
-      "reason": "Footer attribution/promotional outbound link was not requested in the BuildRequest requirements or acceptance criteria.",
-      "evidence": [
-        "frontend/src/components/Footer.tsx"
-      ]
-    },
-    {
-      "description": "Addition of an empty Motoko backend canister actor.",
-      "reason": "The BuildRequest did not ask to add backend code for this marketing website; an empty actor file is added without specified purpose.",
-      "evidence": [
-        "backend/main.mo"
+        "frontend/src/components/sections/ContactSection.tsx"
       ]
     }
   ],
-  "confidence": 0.72,
+  "confidence": 0.83,
   "changed_files": [
-    "all_files_summary.json",
-    "backend/main.mo",
     "frontend-file-summaries.txt",
-    "frontend/index.css",
-    "frontend/index.html",
-    "frontend/src/App.tsx",
-    "frontend/src/components/Footer.tsx",
-    "frontend/src/components/TopNav.tsx",
-    "frontend/src/components/sections/AboutSection.tsx",
     "frontend/src/components/sections/ContactSection.tsx",
-    "frontend/src/components/sections/HeroSection.tsx",
-    "frontend/src/components/sections/ProjectsSection.tsx",
-    "frontend/src/components/sections/ServicesSection.tsx",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/tailwind.config.js",
+    "frontend/src/config/contactInfo.ts",
     "project_state.json"
   ]
 }

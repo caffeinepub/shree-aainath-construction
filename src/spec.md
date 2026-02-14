@@ -1,13 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Create a responsive, construction-themed marketing website for “Shree Aainath Construction” with clear navigation, core business sections, and basic SEO/accessibility.
+**Goal:** Replace placeholder Contact section details with real, configurable business contact information and make phone/email clickable.
 
 **Planned changes:**
-- Build a responsive multi-section site with top navigation (smooth scrolling or routing) and English user-facing copy.
-- Implement sections/pages: Home (hero + value proposition + CTA), About, Services (at least 4 cards), Projects (6-item gallery with images), Contact (TBD contact details + inquiry form UI: Name, Phone, Email, Message).
-- Apply a consistent construction-themed design system (industrial/modern) using a non-blue/non-purple primary palette.
-- Add static asset handling to render generated images for hero, brand/logo area, and project gallery from `frontend/public/assets/generated`.
-- Add basic SEO and accessibility: document title + meta description, semantic headings, alt text, and keyboard-navigable navigation/actions.
+- Update the Contact section to read phone, email, and address values from a configurable frontend source (no backend dependency).
+- Render phone as a `tel:` link and email as a `mailto:` link when present.
+- Hide any contact line item (Phone/Email/Address) that is not configured, instead of showing placeholders like "TBD".
 
-**User-visible outcome:** Visitors can browse a polished, responsive marketing site for Shree Aainath Construction, view services and project placeholders with images, and use a contact inquiry form UI.
+**User-visible outcome:** The Contact section shows real business contact details (phone, email, address) with working clickable phone/email links, and no "TBD" placeholders.

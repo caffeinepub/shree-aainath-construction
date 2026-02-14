@@ -2,36 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-responsive-multi-section-marketing-website-for-the-construction-business-named-shree-aainath-construction-with-clear-navigation-and-english-user-facing-copy",
-      "featureTitle": "Create a responsive multi-section marketing website for the construction business named “Shree Aainath Construction”, with clear navigation and English user-facing copy.",
+      "featureId": "feature-replace-the-placeholder-tbd-contact-details-in-the-contact-section-with-real-configurable-business-contact-information-phone-email-and-address-and-ensure-the-phone-email-entries-render-as-working-clickable-links",
+      "featureTitle": "Replace the placeholder \"TBD\" contact details in the Contact section with real, configurable business contact information (phone, email, and address), and ensure the phone/email entries render as working clickable links.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/TopNav.tsx",
-        "frontend/src/index.css",
-        "frontend/src/main.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-following-core-content-structure-single-page-sections-or-separate-routes-are-acceptable-home-hero-key-value-proposition-about-services-projects-portfolio-gallery-and-contact-business-contact-details-inquiry-form-ui",
-      "featureTitle": "Implement the following core content structure (single-page sections or separate routes are acceptable): Home (hero + key value proposition), About, Services, Projects (portfolio/gallery), and Contact (business contact details + inquiry form UI).",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/sections/AboutSection.tsx",
         "frontend/src/components/sections/ContactSection.tsx",
-        "frontend/src/components/sections/HeroSection.tsx",
-        "frontend/src/components/sections/ProjectsSection.tsx",
-        "frontend/src/components/sections/ServicesSection.tsx"
+        "frontend/src/config/contactInfo.ts"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -41,69 +16,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-coherent-construction-themed-visual-design-system-and-apply-it-consistently-across-the-site-colors-typography-spacing-button-styles-and-section-styling-do-not-use-a-blue-purple-primary-palette",
-      "featureTitle": "Add a coherent, construction-themed visual design system and apply it consistently across the site (colors, typography, spacing, button styles, and section styling). Do not use a blue/purple primary palette.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-static-asset-handling-for-the-required-generated-images-by-placing-them-under-frontend-public-assets-generated-and-rendering-them-in-the-hero-logo-brand-area-and-projects-gallery",
-      "featureTitle": "Add static asset handling for the required generated images by placing them under frontend/public/assets/generated and rendering them in the hero, logo/brand area, and projects gallery.",
-      "files": [
-        "frontend/src/components/TopNav.tsx",
-        "frontend/src/components/sections/HeroSection.tsx",
-        "frontend/src/components/sections/ProjectsSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-ensure-the-website-has-basic-seo-and-accessibility-essentials-correct-document-title-meta-description-semantic-headings-alt-text-for-images-and-keyboard-navigable-links-buttons",
-      "featureTitle": "Ensure the website has basic SEO and accessibility essentials: correct document title, meta description, semantic headings, alt text for images, and keyboard-navigable links/buttons.",
-      "files": [
-        "frontend/index.html",
-        "frontend/src/components/sections/AboutSection.tsx",
-        "frontend/src/components/sections/ContactSection.tsx",
-        "frontend/src/components/sections/HeroSection.tsx",
-        "frontend/src/components/sections/ProjectsSection.tsx",
-        "frontend/src/components/sections/ServicesSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
+        "REQ-6"
       ],
       "confidence": "high"
     }

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { contactInfo } from '@/config/contactInfo';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -28,26 +29,27 @@ const ContactSection = () => {
     });
   };
 
-  const contactInfo = [
-    {
+  // Build contact info array from config, only including configured values
+  const contactInfoItems = [
+    contactInfo.phone && {
       icon: Phone,
       label: 'Phone',
-      value: 'TBD',
-      href: 'tel:TBD'
+      value: contactInfo.phone,
+      href: `tel:${contactInfo.phone.replace(/\s/g, '')}`
     },
-    {
+    contactInfo.email && {
       icon: Mail,
       label: 'Email',
-      value: 'TBD',
-      href: 'mailto:TBD'
+      value: contactInfo.email,
+      href: `mailto:${contactInfo.email}`
     },
-    {
+    contactInfo.address && {
       icon: MapPin,
       label: 'Address',
-      value: 'TBD',
-      href: null
+      value: contactInfo.address,
+      href: contactInfo.addressLink || null
     }
-  ];
+  ].filter(Boolean);
 
   return (
     <section id="contact" className="py-20 md:py-32 bg-background">
@@ -70,7 +72,8 @@ const ContactSection = () => {
                 Contact Information
               </h3>
               <div className="space-y-6">
-                {contactInfo.map((info, index) => {
+                {contactInfoItems.map((info, index) => {
+                  if (!info) return null;
                   const Icon = info.icon;
                   return (
                     <div key={index} className="flex items-start gap-4">

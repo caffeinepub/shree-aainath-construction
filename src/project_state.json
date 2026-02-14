@@ -1,11 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Website project for a construction business: Shree Aainath Construction.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Construction company logo mark + wordmark in a modern industrial style with high contrast (sac-logo.dim_512x512.png)\n- Hero banner image showing a clean construction-themed scene (no readable text), suitable for a website header (sac-hero.dim_1600x900.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-01.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-02.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-03.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-04.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-05.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-06.dim_800x600.png)",
   "existing_features": [
     {
       "id": "feature-create-a-responsive-multi-section-marketing-website-for-the-construction-business-named-shree-aainath-construction-with-clear-navigation-and-english-user-facing-copy",
@@ -46,12 +45,26 @@
         "REQ-5"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-placeholder-tbd-contact-details-in-the-contact-section-with-real-configurable-business-contact-information-phone-email-and-address-and-ensure-the-phone-email-entries-render-as-working-clickable-links",
+      "title": "Replace the placeholder \"TBD\" contact details in the Contact section with real, configurable business contact information (phone, email, and address), and ensure the phone/email entries render as working clickable links.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create a website for the construction business 'Shree Aainath Construction'.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add the user's contact information to the website (Contact section details).",
       "reqIds": [],
       "status": "pending"
     }

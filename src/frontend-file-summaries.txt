@@ -5,9 +5,10 @@
   "frontend/src/components/sections/AboutSection.tsx": "About section presenting company overview with four highlight cards covering experience, quality, delivery, and safety standards.",
   "frontend/src/components/sections/ServicesSection.tsx": "Services section displaying six construction service offerings in a responsive grid with icons and descriptions.",
   "frontend/src/components/sections/ProjectsSection.tsx": "Projects portfolio section with a responsive grid of six project cards, each with image, title, and description.",
-  "frontend/src/components/sections/ContactSection.tsx": "Contact section with business contact information placeholders and a functional inquiry form with validation.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with business contact information displayed from config, functional tel: and mailto: links, and an inquiry form with validation.",
   "frontend/src/components/Footer.tsx": "Footer component with copyright notice and Caffeine.ai attribution with proper UTM tracking.",
   "frontend/src/index.css": "Global styles defining construction-themed OKLCH color system (charcoal gray, safety orange, off-white) for both light and dark modes, plus smooth scrolling behavior.",
   "frontend/tailwind.config.js": "Tailwind configuration extending the theme with construction-appropriate design tokens and maintaining the OKLCH color system.",
-  "frontend/index.html": "HTML entry point with proper meta description for SEO and document title."
+  "frontend/index.html": "HTML entry point with proper meta description for SEO and document title.",
+  "frontend/src/config/contactInfo.ts": "Configuration module exporting business contact information (phone, email, address) with TypeScript interface for type safety."
 }
