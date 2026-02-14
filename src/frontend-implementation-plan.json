@@ -1,0 +1,219 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Shree Aainath Construction marketing website (responsive single-page)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive multi-section marketing site with clear navigation and English copy for “Shree Aainath Construction”.",
+      "acceptanceCriteria": [
+        "The site title/branding displays “Shree Aainath Construction”.",
+        "All visible UI text is in English.",
+        "Layout is responsive for mobile, tablet, and desktop.",
+        "A top navigation allows smooth scrolling or routing to each major section/page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main single-page layout (header + sections) with branding text “Shree Aainath Construction” and responsive structure; include section anchors/ids to support navigation scrolling."
+        },
+        {
+          "path": "frontend/src/components/TopNav.tsx",
+          "operation": "create",
+          "description": "Implement a responsive top navigation that links to each major section (Home, About, Services, Projects, Contact) and supports keyboard navigation. Use shadcn-ui components (e.g., Button) where appropriate; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the app renders the newly created App component and retains existing providers; confirm the import path resolves correctly after adding frontend/src/App.tsx."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add baseline responsive styles (including smooth scrolling behavior) and shared layout utilities used across the site; keep all user-facing text in components in English."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement core content structure: Home (hero + CTA), About, Services, Projects gallery, and Contact details + inquiry form UI.",
+      "acceptanceCriteria": [
+        "Home includes a hero area with headline, short description, and at least one call-to-action button (e.g., “Request a Quote”).",
+        "About section/page includes a company overview and highlights (e.g., experience, quality, safety).",
+        "Services lists at least 4 service cards relevant to a general construction business (generic, non-location-specific wording).",
+        "Projects section displays a grid/gallery layout with at least 6 project placeholders (title + short description) and project images (use generated/static assets).",
+        "Contact section includes clearly labeled placeholders for phone, email, and address (values can be “TBD” if not provided), plus an inquiry form UI with fields: Name, Phone, Email, Message."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create the Home hero section with headline, short value proposition, and at least one CTA button (e.g., “Request a Quote”). Use shadcn-ui components (e.g., Button) for CTAs; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Create the About section with English company overview and highlight bullets (experience, quality, safety) in a responsive layout."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "create",
+          "description": "Create the Services section listing at least 4 service cards relevant to a general construction business. Use shadcn-ui components (e.g., Card) for service tiles; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ProjectsSection.tsx",
+          "operation": "create",
+          "description": "Create the Projects portfolio section with a responsive grid/gallery showing 6 project placeholders (title + short description) and static images from frontend/public/assets/generated. Use shadcn-ui components (e.g., Card) for project tiles; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create the Contact section with placeholders for phone/email/address (TBD allowed) and an inquiry form UI with fields Name, Phone, Email, Message. Use shadcn-ui form inputs (e.g., Input, Textarea, Button) for consistent UI; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire all sections (Hero, About, Services, Projects, Contact) into the single-page flow and ensure navigation targets (ids) match the top nav links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Define and apply a cohesive construction-themed design system (no blue/purple primary palette).",
+      "acceptanceCriteria": [
+        "A consistent palette is used across components (e.g., charcoal/gray + safety orange + off-white).",
+        "Typography is consistent (headings, body text, and button styles).",
+        "Buttons, cards, and section separators follow a unified style.",
+        "Design looks appropriate for a construction brand (industrial/modern feel)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Establish the construction-themed palette using CSS variables (charcoal/gray + safety orange + off-white) and define consistent typography/spacing tokens; avoid blue/purple as the primary palette."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper that standardizes section spacing, max-width/container usage, and consistent section styling (e.g., separators, backgrounds) for an industrial/modern construction feel."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Adopt the shared SiteLayout and apply consistent button/card/section styling across all sections. Use shadcn-ui components where they help enforce consistent styling; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add and render required generated images as static assets (hero, logo/brand, and projects gallery) from frontend/public/assets/generated.",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated.",
+        "Hero uses the specified hero image (or pattern) as a background or prominent visual.",
+        "Branding area uses the specified logo image.",
+        "Projects gallery uses the specified project placeholder images without fetching from the backend."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/sac-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated logo asset at frontend/public/assets/generated/sac-logo.dim_512x512.png for use in the site branding area."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero banner asset at frontend/public/assets/generated/sac-hero.dim_1600x900.png for use in the hero section."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-project-01.dim_800x600.png",
+          "operation": "create",
+          "description": "Add the generated project placeholder image at frontend/public/assets/generated/sac-project-01.dim_800x600.png for the projects gallery."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-project-02.dim_800x600.png",
+          "operation": "create",
+          "description": "Add the generated project placeholder image at frontend/public/assets/generated/sac-project-02.dim_800x600.png for the projects gallery."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-project-03.dim_800x600.png",
+          "operation": "create",
+          "description": "Add the generated project placeholder image at frontend/public/assets/generated/sac-project-03.dim_800x600.png for the projects gallery."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-project-04.dim_800x600.png",
+          "operation": "create",
+          "description": "Add the generated project placeholder image at frontend/public/assets/generated/sac-project-04.dim_800x600.png for the projects gallery."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-project-05.dim_800x600.png",
+          "operation": "create",
+          "description": "Add the generated project placeholder image at frontend/public/assets/generated/sac-project-05.dim_800x600.png for the projects gallery."
+        },
+        {
+          "path": "frontend/public/assets/generated/sac-project-06.dim_800x600.png",
+          "operation": "create",
+          "description": "Add the generated project placeholder image at frontend/public/assets/generated/sac-project-06.dim_800x600.png for the projects gallery."
+        },
+        {
+          "path": "frontend/src/components/TopNav.tsx",
+          "operation": "modify",
+          "description": "Render the brand logo using the static asset frontend/public/assets/generated/sac-logo.dim_512x512.png with appropriate alt text and accessible navigation behavior."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Render the hero image prominently using the static asset frontend/public/assets/generated/sac-hero.dim_1600x900.png (background or primary visual) with meaningful alt text if used as an <img>."
+        },
+        {
+          "path": "frontend/src/components/sections/ProjectsSection.tsx",
+          "operation": "modify",
+          "description": "Wire the 6 project tiles to use the static images from frontend/public/assets/generated/sac-project-01.dim_800x600.png through frontend/public/assets/generated/sac-project-06.dim_800x600.png, without any backend fetching."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add basic SEO and accessibility essentials (title, meta description, semantic headings, alt text, keyboard navigation).",
+      "acceptanceCriteria": [
+        "Document title includes “Shree Aainath Construction”.",
+        "A meta description is present (generic business description is acceptable).",
+        "Pages/sections use semantic heading order (H1 then H2/H3).",
+        "All images have meaningful alt text.",
+        "Navigation and primary actions are usable via keyboard."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add a meta description for the business and verify the existing document title includes “Shree Aainath Construction”; keep lang='en' intact."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Ensure semantic heading structure with a single H1 in the hero and appropriate H2/H3 usage for sub-content; ensure CTA is a real button/link and keyboard accessible. Use shadcn-ui Button if applicable; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/sections/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Ensure semantic headings (H2/H3) and readable, accessible text structure (lists where appropriate) with English copy."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Ensure service cards are keyboard navigable where interactive, use appropriate headings, and maintain consistent alt/aria patterns if icons/images are added."
+        },
+        {
+          "path": "frontend/src/components/sections/ProjectsSection.tsx",
+          "operation": "modify",
+          "description": "Add meaningful alt text for each project image and ensure tile interactions (if any) remain keyboard accessible."
+        },
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Ensure form fields have accessible labels, logical tab order, and keyboard-operable submit action. Use shadcn-ui inputs/buttons if applicable; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

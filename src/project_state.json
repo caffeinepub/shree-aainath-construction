@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Website project for a construction business: Shree Aainath Construction.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Construction company logo mark + wordmark in a modern industrial style with high contrast (sac-logo.dim_512x512.png)\n- Hero banner image showing a clean construction-themed scene (no readable text), suitable for a website header (sac-hero.dim_1600x900.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-01.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-02.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-03.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-04.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-05.dim_800x600.png)\n- Set of 6 construction project placeholder images, consistent style, suitable for portfolio tiles (sac-project-06.dim_800x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-multi-section-marketing-website-for-the-construction-business-named-shree-aainath-construction-with-clear-navigation-and-english-user-facing-copy",
+      "title": "Create a responsive multi-section marketing website for the construction business named “Shree Aainath Construction”, with clear navigation and English user-facing copy.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-following-core-content-structure-single-page-sections-or-separate-routes-are-acceptable-home-hero-key-value-proposition-about-services-projects-portfolio-gallery-and-contact-business-contact-details-inquiry-form-ui",
+      "title": "Implement the following core content structure (single-page sections or separate routes are acceptable): Home (hero + key value proposition), About, Services, Projects (portfolio/gallery), and Contact (business contact details + inquiry form UI).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-coherent-construction-themed-visual-design-system-and-apply-it-consistently-across-the-site-colors-typography-spacing-button-styles-and-section-styling-do-not-use-a-blue-purple-primary-palette",
+      "title": "Add a coherent, construction-themed visual design system and apply it consistently across the site (colors, typography, spacing, button styles, and section styling). Do not use a blue/purple primary palette.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-asset-handling-for-the-required-generated-images-by-placing-them-under-frontend-public-assets-generated-and-rendering-them-in-the-hero-logo-brand-area-and-projects-gallery",
+      "title": "Add static asset handling for the required generated images by placing them under frontend/public/assets/generated and rendering them in the hero, logo/brand area, and projects gallery.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-website-has-basic-seo-and-accessibility-essentials-correct-document-title-meta-description-semantic-headings-alt-text-for-images-and-keyboard-navigable-links-buttons",
+      "title": "Ensure the website has basic SEO and accessibility essentials: correct document title, meta description, semantic headings, alt text for images, and keyboard-navigable links/buttons.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website for the construction business 'Shree Aainath Construction'.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Shree Aainath Construction",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

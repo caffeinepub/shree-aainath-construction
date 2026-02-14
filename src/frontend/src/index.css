@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Construction-themed palette: Charcoal gray + Safety orange + Off-white */
+        --background: 0.98 0 0;
+        --foreground: 0.20 0 0;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.20 0 0;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0 0;
+        
+        /* Safety Orange - Primary accent */
+        --primary: 0.65 0.20 35;
+        --primary-foreground: 1 0 0;
+        
+        --secondary: 0.92 0 0;
+        --secondary-foreground: 0.20 0 0;
+        
+        --muted: 0.94 0 0;
+        --muted-foreground: 0.50 0 0;
+        
+        --accent: 0.92 0 0;
+        --accent-foreground: 0.20 0 0;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        
+        --border: 0.88 0 0;
+        --input: 0.88 0 0;
+        --ring: 0.65 0.20 35;
+        
+        --chart-1: 0.65 0.20 35;
+        --chart-2: 0.45 0.15 220;
+        --chart-3: 0.55 0.18 140;
+        --chart-4: 0.70 0.18 60;
+        --chart-5: 0.60 0.15 280;
+    }
+
+    .dark {
+        /* Dark mode: Deep charcoal backgrounds with orange accents */
+        --background: 0.15 0 0;
+        --foreground: 0.95 0 0;
+        
+        --card: 0.18 0 0;
+        --card-foreground: 0.95 0 0;
+        
+        --popover: 0.18 0 0;
+        --popover-foreground: 0.95 0 0;
+        
+        /* Brighter orange for dark mode */
+        --primary: 0.70 0.22 35;
+        --primary-foreground: 0.15 0 0;
+        
+        --secondary: 0.25 0 0;
+        --secondary-foreground: 0.95 0 0;
+        
+        --muted: 0.25 0 0;
+        --muted-foreground: 0.65 0 0;
+        
+        --accent: 0.30 0 0;
+        --accent-foreground: 0.95 0 0;
+        
+        --destructive: 0.65 0.25 27;
+        --destructive-foreground: 0.95 0 0;
+        
+        --border: 0.30 0 0;
+        --input: 0.30 0 0;
+        --ring: 0.70 0.22 35;
+        
+        --chart-1: 0.70 0.22 35;
+        --chart-2: 0.55 0.18 220;
+        --chart-3: 0.60 0.20 140;
+        --chart-4: 0.75 0.20 60;
+        --chart-5: 0.65 0.18 280;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

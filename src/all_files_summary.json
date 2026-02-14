@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with no functions.",
+  "feature_evidence.json": "Feature report listing implemented site features, related files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Reference file summarizing major frontend components and configuration files.",
+  "frontend/index.css": "Tailwind base and utility setup defining OKLCH color variables for light and dark themes.",
+  "frontend/index.html": "HTML entry point setting SEO meta description, title, and mounting root div.",
+  "frontend/src/App.tsx": "Main app component composing navigation, all page sections, and footer.",
+  "frontend/src/components/Footer.tsx": "Footer with dynamic year and Caffeine.ai attribution link.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section with company overview and highlight cards describing strengths.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section providing business info and an inquiry form with basic state handling.",
+  "frontend/src/components/sections/HeroSection.tsx": "Landing hero section with background image, scroll-to buttons, and three stat cards.",
+  "frontend/src/components/sections/ProjectsSection.tsx": "Displays a grid of project cards with images, titles, and descriptions.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Renders a services grid using cards with icons, titles, and descriptions.",
+  "frontend/src/components/TopNav.tsx": "Responsive sticky top navigation with logo, smooth-scroll links, and mobile menu.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages an authenticated or anonymous backend actor, refreshing queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides Internet Identity auth context with login, logout, state handling, and stored identity loading.",
+  "frontend/src/index.css": "Defines Tailwind base styles and a custom color palette using CSS variables for light and dark modes.",
+  "frontend/src/main.tsx": "Application entry point setting up React Query, Internet Identity provider, and global styles.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending colors, fonts, animations, and enabling plugins like typography and container queries.",
+  "project_state.json": "Defines the website project state, required images, existing implemented features, and initial new feature request data for a construction business site."
+}
